@@ -16,7 +16,7 @@ double F(double x) {
 }
 
 void print(int number) {                                                                                    //Печать римских цифр
-    char result[1000]{'\0'};                                                                                //Массив для хранения результата (вместо String)
+    char result[1000];                                                                                      //Массив для хранения результата (вместо String)
     const int values[] = { 1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000 };                          //Позиции для римских цифр
     const char *symbols[] = { "I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M" };      //Алфавит символов
     int counter = sizeof(symbols) / sizeof(symbols[0]) - 1;                                                 //Выбор последнего элемента массива
@@ -43,7 +43,7 @@ void output() {                                                                 
 
         cout<<"["<<i<<"; "<<result<<"] : (";                                                                //Печать результата в арабских цифрах
         print(int(i));                                                                                      //Печать римских цифр
-        cout<<"; ";                                         
+        cout<<"; ";
         print(int(result));                                                                                 //Печать римских цифр
         cout<<")"<<endl;                                                                                    //Сброс строки
     }
